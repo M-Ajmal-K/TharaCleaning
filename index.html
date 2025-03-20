@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thara Cleaning Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-center font-sans">
+    <!-- Header -->
+    <section class="text-white py-12" style="background: linear-gradient(90deg, rgba(8,50,89,1) 26%, rgba(0,101,189,1) 57%, rgba(23,129,181,1) 77%);">
+        <h1 class="text-5xl font-bold">Thara Cleaning Services</h1>
+        <p class="text-lg mt-2">Reliable, Professional, and Affordable Cleaning</p>
+        <button id="quoteButton" class="mt-4 px-8 py-3 bg-white text-blue-800 font-semibold rounded-md hover:bg-gray-100">Book Now</button>
+    </section>
+    
+    <!-- Services -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 py-16 px-6 max-w-5xl mx-auto">
+        <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold">Home Cleaning</h3>
+            <p class="mt-4 text-lg">Expert service tailored to your needs.</p>
+        </div>
+        <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold">Office Cleaning</h3>
+            <p class="mt-4 text-lg">Keeping your workspace spotless.</p>
+        </div>
+        <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold">Deep Cleaning</h3>
+            <p class="mt-4 text-lg">Thorough cleaning for a fresh start.</p>
+        </div>
+        <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold">Carpet Cleaning</h3>
+            <p class="mt-4 text-lg">Revitalize your carpets with deep cleaning.</p>
+        </div>
+    </section>
+    
+    <!-- Contact Form -->
+    <section id="contact" class="bg-gray-200 py-16 px-6">
+        <h2 class="text-3xl font-bold">Contact Us</h2>
+        <form id="contactForm" class="flex flex-col gap-4 max-w-md mx-auto mt-6">
+            <input type="text" name="name" placeholder="Your Name" required class="p-3 border rounded-md">
+            <input type="email" name="email" placeholder="Your Email" required class="p-3 border rounded-md">
+            <textarea name="message" placeholder="Your Message" required class="p-3 border rounded-md"></textarea>
+            <button type="submit" class="px-6 py-3 bg-blue-800 text-white font-semibold rounded-md hover:bg-blue-900">Send Message</button>
+        </form>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="text-white py-6 mt-10" style="background: linear-gradient(90deg, rgba(8,50,89,1) 26%, rgba(0,101,189,1) 57%, rgba(23,129,181,1) 77%);">
+        <p>&copy; 2025 Thara Cleaning Services. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("quoteButton").addEventListener("click", function () {
+                document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+            });
+
+            document.getElementById("contactForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+                alert("Message sent successfully!");
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
